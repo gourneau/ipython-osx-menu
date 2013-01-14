@@ -16,6 +16,7 @@ just run it with
 ##Requirements
 
 * PyObjC
+* IPython
 
 ##Auto start
 
