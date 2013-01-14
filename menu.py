@@ -13,6 +13,7 @@ import subprocess
 import time
 import sys
 import webbrowser
+import os
 
 proc = False
 
@@ -22,7 +23,7 @@ class MyApp(NSApplication):
         # Make statusbar item
         statusbar = NSStatusBar.systemStatusBar()
         self.statusitem = statusbar.statusItemWithLength_(NSVariableStatusItemLength)
-        self.icon = NSImage.alloc().initByReferencingFile_('beaker.png')
+        self.icon = NSImage.alloc().initByReferencingFile_(os.path.join(os.path.abspath(os.path.dirname(__file__)),'beaker.png'))
         self.icon.setScalesWhenResized_(True)
         self.icon.setSize_((20, 20))
         self.statusitem.setImage_(self.icon)

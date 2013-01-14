@@ -7,7 +7,7 @@
     <string>org.ipython</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/josh/Desktop/imenu/menu.py</string>
+        <string>/Users/josh/Desktop/imenu/ipython-osx-menu/menu.py</string>
     </array>
     <key>RunAtLoad</key>
     <true/>
