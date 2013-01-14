@@ -20,3 +20,4 @@ just run it with
 ##ToDo
 
 * Figure out how to get py2app to launch ipython and package this as an .app
+* Find a way to hide the Python Laucher from the dock
