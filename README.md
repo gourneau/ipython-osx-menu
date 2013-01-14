@@ -5,7 +5,7 @@ ipython-osx-menu
 
 ![Alt text](http://labs.radiantmachines.com/notebook.png "Open in browser")
 
-Easily run and access the iPython notebook from the OS X Menu bar.
+Easily spawn and the access IPython notebook from the OS X Menu bar. 
 
 This is super alpha.
 
