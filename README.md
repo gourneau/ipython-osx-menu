@@ -19,7 +19,7 @@ just run it with
 
 ##Auto start
 
-If you want to have this start after logging in copy this file to `~/Libary/LaunchAgents` LaunchAgents are start only after a user logs in.
+To have this auto-start copy the below to a file in  `~/Libary/LaunchAgents` 
 
 Make sure to change the `<string>/Users/josh/Desktop/imenu/menu.py</string>` to your scripts path.
 
@@ -40,7 +40,7 @@ Make sure to change the `<string>/Users/josh/Desktop/imenu/menu.py</string>` to 
 </dict>
 </plist>
 ```
-This file is included in this repo as `org.ipython.plist`
+This file is included in this repo as `org.ipython.plist` which would be a good for your own.
 
 ##ToDo
 
