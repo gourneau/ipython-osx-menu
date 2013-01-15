@@ -23,6 +23,7 @@ class MyApp(NSApplication):
         # Make statusbar item
         statusbar = NSStatusBar.systemStatusBar()
         self.statusitem = statusbar.statusItemWithLength_(NSVariableStatusItemLength)
+        #TODO: change icon to show if the notebook has loaded or not
         self.icon = NSImage.alloc().initByReferencingFile_(os.path.join(os.path.abspath(os.path.dirname(__file__)),'beaker.png'))
         self.icon.setScalesWhenResized_(True)
         self.icon.setSize_((20, 20))
@@ -36,7 +37,7 @@ class MyApp(NSApplication):
         self.browser = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Open IPython notebooks in browser', 'browser:', '')
         self.menubarMenu.addItem_(self.browser)
         
-        self.quit = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Quit Launcher and IPython daemon', 'close:', '')
+        self.quit = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Quit Launcher and daemon', 'close:', '')
         self.menubarMenu.addItem_(self.quit)
 
         #add menu to statusitem
@@ -62,7 +63,9 @@ def startNotebook():
     global proc
     if not proc:
         #print "starting"
-        proc = subprocess.Popen(["/usr/bin/python", "/usr/local/bin/ipython", "notebook", "--pylab", "inline", "--no-browser"], shell=False)
+        proc = subprocess.Popen(["/usr/bin/python", "/usr/local/bin/ipython", "notebook", "--pylab", "inline", "--no-browser"], 
+                                    shell=False, cwd=os.path.join(os.path.abspath(os.path.dirname(__file__))))
+        
 
 
 if __name__ == "__main__":
