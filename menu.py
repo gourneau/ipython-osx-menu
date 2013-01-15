@@ -32,16 +32,16 @@ class MyApp(NSApplication):
         
         #make the menu
         self.menubarMenu = NSMenu.alloc().init()
-
-        self.browser = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Open in browser', 'browser:', '')
+        
+        self.browser = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Open IPython notebooks in browser', 'browser:', '')
         self.menubarMenu.addItem_(self.browser)
         
-        self.quit = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Quit', 'close:', '')
+        self.quit = NSMenuItem.alloc().initWithTitle_action_keyEquivalent_('Quit Launcher and IPython daemon', 'close:', '')
         self.menubarMenu.addItem_(self.quit)
 
         #add menu to statusitem
         self.statusitem.setMenu_(self.menubarMenu)
-        self.statusitem.setToolTip_('My App')
+        self.statusitem.setToolTip_('IPython notebook launcher')
         
 
     def clicked_(self, notification):
