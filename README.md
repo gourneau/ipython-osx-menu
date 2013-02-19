@@ -47,4 +47,4 @@ This file is included in this repo as `org.ipython.plist` which would be a good 
 
 * Figure out how to get py2app to launch ipython and package this as an .app
 * Find a way to hide the Python Laucher from the dock
-* Find a way to list active notebooks, and go directly to their pages
+* Find a way to list active notebooks on the launcher menu, and go directly to their pages
